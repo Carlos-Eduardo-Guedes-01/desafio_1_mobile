@@ -5,10 +5,7 @@ import 'package:desafio_01/home_page.dart';
 import 'package:device_preview/device_preview.dart';
 
 void main() {
-  runApp(DevicePreview(
-      enabled: true,
-      storage: DevicePreviewStorage.preferences(),
-      builder: (context) => const MyApp()));
+  runApp(const MyApp());
 }
 
 class MyApp extends StatelessWidget {

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-widgetbody() {
+widgetbody(Widget card) {
   return Container(
     decoration: BoxDecoration(
         color: Colors.white,
@@ -22,80 +22,118 @@ widgetbody() {
                     children: <Widget>[
                       Row(
                         children: [
-                          Container(
-                              width: 90,
-                              height: 90,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(500),
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/ppsspp11.jpg')),
-                              )),
+                          Stack(
+                            children: [
+                              Container(
+                                width: 90,
+                                height: 90,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 255, 201, 5),
+                                  borderRadius: BorderRadius.circular(500),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/ppsspp11.png')),
+                                ),
+                              ),
+                            ],
+                          ),
                           Container(
                             width: 40,
                           ),
-                          Container(
-                              width: 90,
-                              height: 90,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(500),
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/ppsspp11.jpg')),
-                              )),
+                          Stack(
+                            children: [
+                              Container(
+                                width: 90,
+                                height: 90,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 255, 201, 5),
+                                  borderRadius: BorderRadius.circular(500),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/ppsspp11.png')),
+                                ),
+                              ),
+                            ],
+                          ),
                           Container(
                             width: 40,
                           ),
-                          Container(
-                              width: 90,
-                              height: 90,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(500),
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/ppsspp11.jpg')),
-                              )),
+                          Stack(
+                            children: [
+                              Container(
+                                width: 90,
+                                height: 90,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 255, 201, 5),
+                                  borderRadius: BorderRadius.circular(500),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/ppsspp11.png')),
+                                ),
+                              ),
+                            ],
+                          ),
                           Container(
                             width: 40,
                           ),
-                          Container(
-                              width: 90,
-                              height: 90,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(500),
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/ppsspp11.jpg')),
-                              )),
+                          Stack(
+                            children: [
+                              Container(
+                                width: 90,
+                                height: 90,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 255, 201, 5),
+                                  borderRadius: BorderRadius.circular(500),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/ppsspp11.png')),
+                                ),
+                              ),
+                            ],
+                          ),
                           Container(
                             width: 40,
                           ),
-                          Container(
-                              width: 90,
-                              height: 90,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(500),
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/ppsspp11.jpg')),
-                              )),
+                          Stack(
+                            children: [
+                              Container(
+                                width: 90,
+                                height: 90,
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 255, 201, 5),
+                                  borderRadius: BorderRadius.circular(500),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/ppsspp11.png')),
+                                ),
+                              ),
+                            ],
+                          ),
                           Container(
                             width: 40,
                           ),
-                          Container(
-                              width: 90,
-                              height: 90,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(500),
-                                image: DecorationImage(
-                                    image: AssetImage(
-                                        'assets/images/ppsspp11.jpg')),
-                              )),
+                          Stack(
+                            children: [
+                              Container(
+                                width: 90,
+                                height: 90,
+                                margin: EdgeInsets.only(right: 30),
+                                decoration: BoxDecoration(
+                                  color: Color.fromARGB(255, 255, 201, 5),
+                                  borderRadius: BorderRadius.circular(500),
+                                  image: DecorationImage(
+                                      image: AssetImage(
+                                          'assets/images/ppsspp11.png')),
+                                ),
+                              ),
+                            ],
+                          ),
                         ],
                       ),
                     ],
                   )),
             ),
+            card,
             Container(
                 margin: EdgeInsets.only(left: 30, top: 50),
                 child: Text(
