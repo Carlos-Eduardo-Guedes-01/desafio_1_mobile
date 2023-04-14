@@ -76,6 +76,10 @@ flutter:
     - assets/images/life_is_strange.jpg
     - assets/images/portal.jpg
     - assets/images/red_dead.jpeg
+    - assets/images/estrela_completa.png
+    - assets/images/estrela_metade.png
+    - assets/images/estrela_vazia.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
