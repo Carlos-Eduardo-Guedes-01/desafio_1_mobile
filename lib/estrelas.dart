@@ -37,13 +37,29 @@ estrelavazia(double ml) {
 }
 
 tipoestrela(String nome) {
-  if (nome == 'Portal') {
-    return Row(children: [
+  if (nome == 'Portal' || nome == 'Red Dead Redemption 2') {
+    return Stack(children: [
       estrelacompleta(170),
       estrelacompleta(190),
       estrelacompleta(210),
       estrelacompleta(230),
       estrelacompleta(250),
+    ]);
+  } else if (nome == 'Counter Strike: Global Ofensive ...') {
+    return Stack(children: [
+      estrelacompleta(170),
+      estrelacompleta(190),
+      estrelacompleta(210),
+      estrelacompleta(230),
+      estrelavazia(250),
+    ]);
+  } else {
+    return Stack(children: [
+      estrelacompleta(170),
+      estrelacompleta(190),
+      estrelacompleta(210),
+      estrelacompleta(230),
+      estrelametade(250),
     ]);
   }
 }

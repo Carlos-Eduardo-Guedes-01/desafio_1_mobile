@@ -12,6 +12,7 @@ class MyHomePage extends StatefulWidget {
 class _MyHomePageState extends State<MyHomePage> {
   @override
   var card = Stack();
+  var cor = Color.fromARGB(255, 255, 201, 5);
   void tipo(String img, String nome) {
     setState(() {
       card = Stack(
@@ -50,6 +51,6 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Color.fromARGB(255, 250, 97, 50),
           elevation: 0,
         ),
-        body: widgetbody(card));
+        body: widgetbody(card, cor));
   }
 }
