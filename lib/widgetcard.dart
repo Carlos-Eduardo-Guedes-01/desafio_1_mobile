@@ -13,7 +13,9 @@ widgetcard(String img, String nome) {
       Container(
         width: 250,
         height: 30,
-        decoration: BoxDecoration(color: Color.fromRGBO(255, 255, 255, 0.9)),
+        decoration: BoxDecoration(
+          color: Color.fromRGBO(255, 255, 255, 0.9),
+        ),
         child: Text(
           nome,
           style: TextStyle(fontSize: 20, color: Colors.white),
@@ -61,6 +63,22 @@ widgetcard2(String img, String nome, String categoria, var cor) {
           categoria,
           style: TextStyle(fontSize: 16, fontWeight: FontWeight.bold),
         ),
+      ),
+      Stack(
+        children: [
+          Container(
+            padding: EdgeInsets.only(left: 10, right: 10),
+            margin: EdgeInsets.only(left: 290, top: 55),
+            alignment: Alignment.centerLeft,
+            height: 30,
+            decoration: BoxDecoration(
+              color: Color.fromARGB(255, 255, 214, 64),
+              borderRadius: BorderRadius.circular(10),
+            ),
+            child: Text('View More',
+                style: TextStyle(fontWeight: FontWeight.bold)),
+          ),
+        ],
       ),
       //ElevatedButton(onPressed: onPressed, child: Text(data)),
       tipoestrela(nome),

@@ -14,7 +14,7 @@ widgetcategoria() {
           height: 80,
           margin: EdgeInsets.only(),
           decoration: BoxDecoration(
-            color: Color.fromARGB(255, 255, 201, 5),
+            color: Color.fromARGB(255, 255, 214, 64),
             borderRadius: BorderRadius.circular(500),
             image: DecorationImage(
                 image: AssetImage('assets/images/ppsspp11.png')),
