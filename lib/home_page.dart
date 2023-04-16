@@ -1,44 +1,52 @@
 import 'package:flutter/material.dart';
 import 'body.dart';
 import 'appbar.dart';
+import 'modal.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key});
 
   @override
-  State<MyHomePage> createState() => _MyHomePageState();
+  State<MyHomePage> createState() => MyHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class MyHomePageState extends State<MyHomePage> {
   @override
   var card = Stack();
-  var cor = Color.fromARGB(255, 255, 201, 5);
-  void tipo(String img, String nome) {
-    setState(() {
-      card = Stack(
-        children: [
-          Container(
-            width: 120,
-            height: 100,
-            margin: EdgeInsets.only(left: 30),
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(30)),
-              image: DecorationImage(
-                image: AssetImage(img),
+  var v = 0;
+  var cor = Color.fromARGB(255, 255, 214, 64);
+  String tipo(String img, String nome) {
+    if (v == 0) {
+      setState(() {
+        v = 1;
+        cor = Color.fromARGB(255, 250, 97, 50);
+        card = Stack(
+          children: [
+            Container(
+              child: SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Row(
+                  children: [
+                    widgetmodal(img, nome),
+                    widgetmodal(img, nome),
+                    widgetmodal(img, nome),
+                    widgetmodal(img, nome),
+                  ],
+                ),
               ),
             ),
-          ),
-          Container(
-            width: 290,
-            height: 100,
-            decoration: BoxDecoration(
-              color: Color.fromRGBO(255, 255, 255, .8),
-            ),
-            child: Text(nome),
-          ),
-        ],
-      );
-    });
+          ],
+        );
+      });
+    } else if (v != 0) {
+      setState(() {
+        cor = Color.fromARGB(255, 255, 214, 64);
+        card = Stack();
+        v = 0;
+      });
+    }
+
+    return '';
   }
 
   Widget build(BuildContext context) {
@@ -51,6 +59,6 @@ class _MyHomePageState extends State<MyHomePage> {
           backgroundColor: Color.fromARGB(255, 250, 97, 50),
           elevation: 0,
         ),
-        body: widgetbody(card, cor));
+        body: widgetbody(cor: cor, card: card));
   }
 }

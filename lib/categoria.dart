@@ -1,30 +1,35 @@
 import 'package:flutter/cupertino.dart';
+import 'package:desafio_01/home_page.dart';
 
-widgetcategoria() {
-  return Stack(
-    children: [
-      GestureDetector(
-        onTap: () {
-          BoxDecoration(
-            color: Color.fromARGB(255, 250, 97, 50),
-          );
-        },
-        child: Container(
-          width: 80,
-          height: 80,
-          margin: EdgeInsets.only(),
-          decoration: BoxDecoration(
-            color: Color.fromARGB(255, 255, 214, 64),
-            borderRadius: BorderRadius.circular(500),
-            image: DecorationImage(
-                image: AssetImage('assets/images/ppsspp11.png')),
+class widgetcategoria extends StatelessWidget {
+  final Color cor;
+  const widgetcategoria({super.key, required this.cor});
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      children: [
+        GestureDetector(
+          onTap: () {
+            context.findRootAncestorStateOfType<MyHomePageState>()?.tipo(
+                'assets/images/cs_go.jpg', 'Counter Strike Global Defense');
+          },
+          child: Container(
+            width: 80,
+            height: 80,
+            decoration: BoxDecoration(
+              color: cor,
+              borderRadius: BorderRadius.circular(500),
+              image: const DecorationImage(
+                  image: AssetImage('assets/images/ppsspp11.png')),
+            ),
           ),
         ),
-      ),
-      Container(
-        margin: EdgeInsets.only(top: 80, left: 18),
-        child: Text('Action'),
-      ),
-    ],
-  );
+        Container(
+          margin: const EdgeInsets.only(top: 80, left: 18),
+          child: const Text('Action'),
+        ),
+      ],
+    );
+  }
 }
